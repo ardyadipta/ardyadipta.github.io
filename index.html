@@ -1,1 +1,429 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ardya Dipta Nandaviri · AI/ML Consultant, Data Science Leader</title>
+<meta name="description" content="Ardya Dipta Nandaviri: Senior AI/ML Consultant at AWS Professional Services, former Head of Data Science at Kalbe Farma and Lead Data Scientist at Gojek. Carnegie Mellon MS in Robotics. Reinforcement learning, recommendation systems, fraud detection, LLMs and GenAI.">
+<meta property="og:title" content="Ardya Dipta Nandaviri">
+<meta property="og:description" content="Senior AI/ML Consultant · Data Science and AI leader with 10+ years building scalable ML systems · CMU Robotics alum">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='700' fill='%2360a5fa' text-anchor='middle'%3EAD%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0b1220; --bg2:#0f172a; --panel:#111a2e; --panel2:#152039; --line:#22304d;
+  --ink:#e6edf7; --ink2:#b7c3d8; --muted:#8290ab;
+  --accent:#60a5fa; --accent2:#34d399; --amber:#fbbf24; --violet:#a78bfa;
+  --max:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--amber);color:#111;padding:8px 12px;border-radius:6px;z-index:10}
+.skip:focus{left:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:5;background:rgba(11,18,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
+.brand{font-weight:700;letter-spacing:.2px;color:var(--ink)}
+.brand span{color:var(--accent)}
+.nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0;font-size:14px}
+.nav ul a{color:var(--ink2)}
+.nav ul a:hover{color:var(--ink);text-decoration:none}
+@media (max-width:720px){.nav ul{display:none}}
+
+/* hero */
+.hero{padding:72px 0 48px;background:radial-gradient(900px 400px at 15% -10%,rgba(96,165,250,.18),transparent 60%),radial-gradient(700px 400px at 90% 10%,rgba(52,211,153,.12),transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr}}
+.eyebrow{color:var(--accent2);font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:12px;margin:0 0 12px}
+h1{font-size:clamp(34px,5vw,52px);line-height:1.1;margin:0 0 14px;letter-spacing:-.5px}
+.lede{font-size:18px;color:var(--ink2);margin:0 0 24px;max-width:60ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;border:1px solid var(--line);color:var(--ink);background:var(--panel)}
+.btn:hover{text-decoration:none;border-color:var(--accent);background:var(--panel2)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#08111f}
+.btn.primary:hover{background:#7db6fb}
+.social{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap;font-size:14px}
+.social a{color:var(--ink2);display:inline-flex;align-items:center;gap:6px}
+.social svg{width:16px;height:16px;fill:currentColor}
+.hero-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+.hero-card h2{margin:0 0 14px;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px}
+.stat b{display:block;font-size:24px;color:var(--ink);letter-spacing:-.3px}
+.stat span{font-size:13px;color:var(--muted)}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2.sec{font-size:26px;margin:0 0 6px;letter-spacing:-.3px}
+.sub{color:var(--muted);margin:0 0 28px}
+.badges{display:flex;gap:10px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;color:var(--ink2)}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent2)}
+.badge.aws::before{background:var(--amber)}
+.badge.google::before{background:var(--accent)}
+
+/* timeline */
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.job{position:relative;margin:0 0 30px}
+.job::before{content:"";position:absolute;left:-26px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.job.current::before{border-color:var(--accent2);box-shadow:0 0 0 5px rgba(52,211,153,.18)}
+.job-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.job h3{margin:0;font-size:19px}
+.job .org{color:var(--ink2);font-weight:500}
+.job .org-desc{margin:2px 0 0;color:var(--muted);font-size:14px}
+.job .when{color:var(--muted);font-size:14px;white-space:nowrap}
+.job ul{margin:10px 0 0;padding-left:18px;color:var(--ink2)}
+.job li{margin:6px 0}
+.job li b{color:var(--ink);font-weight:600}
+.role2{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+.role2 h4{margin:0 0 4px;font-size:16px}
+.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:6px}
+.mini .card{padding:14px}
+.mini .card b{display:block;color:var(--ink)}
+.mini .card span{color:var(--muted);font-size:14px}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;transition:border-color .15s,transform .15s}
+.card:hover{border-color:#34507f;transform:translateY(-2px)}
+.card h3{margin:0 0 8px;font-size:17px}
+.card p{margin:0 0 12px;color:var(--ink2);font-size:15px}
+.tag{display:inline-block;font-size:12px;color:var(--muted);background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:2px 8px;margin:0 6px 6px 0}
+.links{display:flex;gap:14px;font-size:14px;flex-wrap:wrap}
+.card.feature{grid-column:1/-1;background:linear-gradient(135deg,var(--panel),#13213f);border-color:#2b4370}
+
+/* two-col lists */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.list{margin:0;padding:0;list-style:none}
+.list li{padding:10px 0;border-bottom:1px solid var(--line);color:var(--ink2);display:flex;gap:12px;align-items:baseline}
+.list li:last-child{border-bottom:none}
+.list .yr{color:var(--muted);font-size:13px;min-width:64px;font-variant-numeric:tabular-nums}
+.skills h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px}
+.skills h3:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:14px;color:var(--ink2)}
+.edu .card h3{font-size:16px}
+.edu .card p{margin-bottom:6px}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="brand" href="#top">Ardya <span>Dipta</span> Nandaviri</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Senior AI/ML Consultant · AWS Professional Services</p>
+      <h1>Ardya Dipta Nandaviri</h1>
+      <p class="lede">Data science and AI leader with 10+ years of experience building scalable, revenue-generating AI/ML systems: reinforcement learning for personalization, recommendation systems at 10M+ daily users, fraud detection, and LLM/GenAI applications. Carnegie Mellon Robotics alum, based in Singapore.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://drive.google.com/file/d/1NC2kdx7UXwg94ZosQadx7ZO7EWA7rgPi/view">Download résumé (PDF)</a>
+        <a class="btn" href="mailto:ardyadipta@gmail.com">Get in touch</a>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/ardyadipta" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.2 8h4.6v14H.2V8zm7.6 0h4.4v1.9h.1c.6-1.1 2.1-2.3 4.3-2.3 4.6 0 5.4 3 5.4 6.9V22h-4.6v-6.6c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5V22H7.8V8z"/></svg>LinkedIn</a>
+        <a href="https://github.com/ardyadipta" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>GitHub</a>
+        <a href="https://medium.com/@ardyadipta" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 12a6.8 6.8 0 1 1-13.6 0 6.8 6.8 0 0 1 13.6 0zm7.4 0c0 3.5-1.5 6.4-3.4 6.4s-3.4-2.9-3.4-6.4 1.5-6.4 3.4-6.4 3.4 2.9 3.4 6.4zM24 12c0 3.2-.5 5.7-1.2 5.7s-1.2-2.5-1.2-5.7.5-5.7 1.2-5.7S24 8.8 24 12z"/></svg>Medium</a>
+        <a href="https://ardyadipta.com/" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm6.9 6h-3a15 15 0 0 0-1.3-3.6A8 8 0 0 1 18.9 8zM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4zM4.3 14a8 8 0 0 1 0-4h3.4a16 16 0 0 0 0 4H4.3zm.8 2h3a15 15 0 0 0 1.3 3.6A8 8 0 0 1 5.1 16zm3-8h-3a8 8 0 0 1 4.3-3.6A15 15 0 0 0 8.1 8zM12 20c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4zm2.3-6H9.7a14 14 0 0 1 0-4h4.6a14 14 0 0 1 0 4zm.3 5.6a15 15 0 0 0 1.3-3.6h3a8 8 0 0 1-4.3 3.6zm1.7-5.6a16 16 0 0 0 0-4h3.4a8 8 0 0 1 0 4h-3.4z"/></svg>ardyadipta.com</a>
+        <a href="https://g.dev/ardyadipta" rel="me noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 11v2.8h4.6c-.2 1.2-1.4 3.5-4.6 3.5a5.3 5.3 0 0 1 0-10.6c1.7 0 2.8.7 3.4 1.3l2.3-2.2A8.4 8.4 0 0 0 12 3.5a8.5 8.5 0 1 0 0 17c4.9 0 8.2-3.4 8.2-8.3 0-.6-.1-1-.2-1.4H12z"/></svg>former Google Developer Expert</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="At a glance">
+      <h2>At a glance</h2>
+      <div class="stats">
+        <div class="stat"><b>10+ yrs</b><span>AI/ML and data science</span></div>
+        <div class="stat"><b>$1M / mo</b><span>revenue lift from RL-based recommendations</span></div>
+        <div class="stat"><b>100+</b><span>public talks including TEDx, DevFest, Cloud Next</span></div>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<main id="main">
+
+<section id="certs" aria-labelledby="certs-h">
+  <div class="wrap">
+    <h2 class="sec" id="certs-h">Credentials</h2>
+    <p class="sub">Certifications and recognition. AWS badges are verifiable on <a href="https://www.credly.com/users/ardya-dipta-nandaviri/badges" target="_blank" rel="noopener">Credly</a>.</p>
+    <div class="badges">
+      <span class="badge aws">AWS Certified Machine Learning – Specialty</span>
+      <span class="badge aws">AWS Certified Machine Learning Engineer</span>
+      <span class="badge aws">AWS Certified AI Practitioner</span>
+      <span class="badge aws">AWS Certified Cloud Practitioner</span>
+      <span class="badge google">Google Certified GenAI Leader</span>
+      <span class="badge google">Google Certified TensorFlow Developer</span>
+      <span class="badge google">Google Developer Expert, AI/ML &amp; GenAI (2024–2025)</span>
+      <span class="badge">Harvard Business School Online, Negotiation Mastery (2023)</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience" aria-labelledby="exp-h">
+  <div class="wrap">
+    <h2 class="sec" id="exp-h">Experience</h2>
+    <p class="sub">From robotics perception at Carnegie Mellon and Caterpillar to leading data science organizations at Indonesia's largest tech and healthcare companies.</p>
+    <div class="timeline">
+
+      <article class="job current">
+        <div class="job-head">
+          <h3>Senior AI/ML Consultant <span class="org">· Amazon Web Services</span></h3>
+          <span class="when">Oct 2025 – present</span>
+        </div>
+        <p class="org-desc">ASEAN Professional Services, Singapore</p>
+        <ul>
+          <li>Helping customers across Southeast Asia accelerate business growth through AI/ML, from generative AI and agentic applications to production ML platforms.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Head of Data Science and Business Insights <span class="org">· Kalbe Farma</span></h3>
+          <span class="when">Jun 2023 – Jul 2025</span>
+        </div>
+        <p class="org-desc">largest pharmaceutical, healthcare and nutrition company in SEA, ~$4B valuation</p>
+        <ul>
+          <li>Spearheaded data science strategy and end-to-end ML deployment, leading the team to deliver <b>20B IDR in revenue growth</b> with reinforcement learning for personalized marketing and recommendations.</li>
+          <li>Cut overstock by <b>30%</b> with time-series forecasting models optimized for inventory management.</li>
+          <li>Built and deployed an LLM chatbot for business inquiries using <b>RAG and text-to-SQL</b>.</li>
+          <li>Led bioinformatics data scientists to research and deploy a genomics-based polygenic risk score (PRS) algorithm, improving the accuracy of Kalbe's Nutrigenme genomic testing.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Lead Data Scientist, Fraud &amp; Recommendation Systems <span class="org">· Gojek</span></h3>
+          <span class="when">Jan 2021 – Jun 2023</span>
+        </div>
+        <p class="org-desc">Indonesia's first tech unicorn, ride-hailing super-app, ~$5.1B valuation</p>
+        <ul>
+          <li>IC and team lead; mentored 3 data analysts and 4 data scientists, <b>4 of whom were promoted</b>.</li>
+          <li><b>Recommendation system:</b> ~<b>$1M monthly revenue growth</b> from an end-to-end MLOps pipeline serving <b>10M+ DAU</b>, lifting CTR 10% with multi-armed-bandit personalization and cutting deployment latency 40%.</li>
+          <li><b>Fraud detection:</b> potentially saved <b>$3M+ in six months</b> with a TensorFlow autoencoder anomaly detector that cut incentive abuse by 80%+; reduced scams from illegal and fake-GPS apps by 90%+ by classifying GPS ping patterns.</li>
+        </ul>
+        <div class="role2">
+          <h4>Senior Data Scientist <span class="when">· Oct 2017 – Dec 2020</span></h4>
+          <ul>
+            <li>Architected the fraud detection system (TensorFlow autoencoder) that removed 90%+ of incentive abusers.</li>
+            <li>Designed scalable MLOps for routing optimization and churn prediction at 10M daily active users.</li>
+            <li>Integrated Google Cloud Vertex AI for real-time predictions with a &lt;200 ms SLA.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Lead Data Scientist <span class="org">· Amartha</span></h3>
+          <span class="when">Nov 2016 – Oct 2017</span>
+        </div>
+        <p class="org-desc">peer-to-peer lending, $53M Series C</p>
+        <ul><li>Led the data science team and deployed a credit scoring system that held non-performing loans at <b>&le; 0.5%</b>.</li></ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Robotics Research Programmer &amp; Analyst <span class="org">· Carnegie Mellon University, The Robotics Institute</span></h3>
+          <span class="when">Jan – Oct 2016</span>
+        </div>
+        <p class="org-desc">Pittsburgh</p>
+        <ul><li>Developed and tested software for self-driving vehicle projects, including an Extended Kalman Filter sensor-fusion system. C++, MATLAB, ROS.</li></ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <h3>Robotics Perception Engineer <span class="org">· Caterpillar Inc.</span></h3>
+          <span class="when">Jan – Dec 2015</span>
+        </div>
+        <p class="org-desc">Pittsburgh</p>
+        <ul><li>Built ML and computer vision systems to improve obstacle detection for an <a href="https://www.youtube.com/watch?v=PD50K6M_ihM" target="_blank" rel="noopener">autonomous mining truck</a>. C++, Python, Linux.</li></ul>
+      </article>
+
+      <div class="mini">
+        <div class="card"><b>The World Bank</b><span>Data Scientist (part-time) · 2018–2019</span></div>
+        <div class="card"><b>Lifeshel LLC</b><span>Software &amp; Electrical Engineer · 2014, USA</span></div>
+        <div class="card"><b>IBM</b><span>IT Specialist · 2010–2013, Indonesia</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" aria-labelledby="proj-h">
+  <div class="wrap">
+    <h2 class="sec" id="proj-h">Projects</h2>
+    <p class="sub">Open-source work and write-ups. Private repositories are available on request for hiring purposes.</p>
+    <div class="grid">
+      <article class="card feature">
+        <h3>Deploying a 100,000-document RAG knowledge base</h3>
+        <p>A long-form design walkthrough: tiered ingestion (layout parsing, OCR, vision captions), structure-aware chunking, metadata filtering, BM25 and HNSW retrieval, reciprocal rank fusion with reranking, and when GraphRAG earns its cost. Paired with an interactive, animated 12-step explainer.</p>
+        <span class="tag">RAG</span><span class="tag">Hybrid retrieval</span><span class="tag">GraphRAG</span><span class="tag">System design</span>
+        <div class="links"><a href="https://ardyadipta.github.io/blog/rag-pipeline-explainer.html">Animated explainer</a></div>
+      </article>
+      <article class="card">
+        <h3>LLM chatbot assistant</h3>
+        <p>Document-querying chatbot built with Google Gemini, FAISS and LangChain to improve employee productivity.</p>
+        <span class="tag">Gemini</span><span class="tag">FAISS</span><span class="tag">LangChain</span>
+        <div class="links"><a href="https://github.com/ardyadipta/gemini_chatbot_qna" target="_blank" rel="noopener">GitHub</a><a href="https://medium.com/@ardyadipta/how-google-gemini-can-help-you-create-a-mike-ross-like-chatbot-agent-in-minutes-6fd8199e3122" target="_blank" rel="noopener">Blog</a></div>
+      </article>
+      <article class="card">
+        <h3>RLHF for GPT</h3>
+        <p>Fine-tuning GPT models with reinforcement learning from human feedback to improve user engagement metrics.</p>
+        <span class="tag">RLHF</span><span class="tag">Fine-tuning</span><span class="tag">PyTorch</span>
+        <div class="links"><a href="https://github.com/ardyadipta/exploring_rlhf" target="_blank" rel="noopener">GitHub</a><a href="https://medium.com/@ardyadipta/teaching-ai-to-understand-us-reinforcement-learning-with-human-feedback-rlhf-5fc5ae16da40" target="_blank" rel="noopener">Blog</a></div>
+      </article>
+      <article class="card">
+        <h3>Lie detection from micro-expressions</h3>
+        <p>Computer vision and deep learning system that detects deception from facial micro-expressions. Top-10 finalist, Bank Indonesia AI Hackathon 2024.</p>
+        <span class="tag">Computer vision</span><span class="tag">TensorFlow</span><span class="tag">Vertex AI</span>
+        <div class="links"><a href="https://github.com/ardyadipta/lie_detection" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/posts/ardyadipta_tensorflow-vertexai-activity-7226182776985640960-05k6" target="_blank" rel="noopener">Post</a></div>
+      </article>
+      <article class="card">
+        <h3>Fraud detection in health insurance</h3>
+        <p>ML pipelines in Python, PyTorch and GCP that reduced fraudulent claims by 15% for one of Indonesia's largest insurers.</p>
+        <span class="tag">PyTorch</span><span class="tag">GCP</span><span class="tag">Imbalanced learning</span>
+        <div class="links"><a href="https://github.com/ardyadipta/hackathon_mandiri_inhealth" target="_blank" rel="noopener">GitHub</a></div>
+      </article>
+      <article class="card">
+        <h3>Perception for self-driving cars</h3>
+        <p>Perception and sensor-fusion work from Carnegie Mellon's Robotics Institute, with an accompanying paper.</p>
+        <span class="tag">Robotics</span><span class="tag">Sensor fusion</span><span class="tag">C++</span>
+        <div class="links"><a href="https://ardyadipta.com/?page_id=470" target="_blank" rel="noopener">Blog &amp; paper</a></div>
+      </article>
+      <article class="card">
+        <h3>Google Lunar X-Prize moon lander</h3>
+        <p>Robotics work on a lunar lander robot for the Google Lunar X-Prize, 2013–2014.</p>
+        <span class="tag">Space robotics</span><span class="tag">CMU</span>
+        <div class="links"><a href="https://ardyadipta.com/?page_id=241" target="_blank" rel="noopener">Blog</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="writing" aria-labelledby="writing-h">
+  <div class="wrap">
+    <h2 class="sec" id="writing-h">Writing &amp; speaking</h2>
+    <p class="sub">100+ public talks at tech companies, universities, national institutions and communities.</p>
+    <div class="two">
+      <div>
+        <ul class="list">
+          <li><span class="yr">TEDx</span><a href="https://www.ted.com/talks/ardya_dipta_how_ai_saves_humanity_thousand_years_of_work_ardya_dipta_tedxitb" target="_blank" rel="noopener">How AI saves humanity a thousand years of work</a></li>
+          <li><span class="yr">2024</span><a href="https://gdg.community.dev/events/details/google-gdg-jakarta-presents-devfest-jakarta-2024/" target="_blank" rel="noopener">Google DevFest Jakarta</a></li>
+          <li><span class="yr">Talk</span><a href="https://www.youtube.com/watch?v=6sSF5sOov6w&amp;t=583s" target="_blank" rel="noopener">Google Cloud Next</a></li>
+          <li><span class="yr">Talk</span><a href="https://www.youtube.com/watch?v=5ofra-bKJtc" target="_blank" rel="noopener">Tech in Asia</a></li>
+          <li><span class="yr">Medium</span><a href="https://medium.com/@ardyadipta" target="_blank" rel="noopener">Articles on LLMs, RLHF and applied ML</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="list">
+          <li><span class="yr">2020</span><a href="https://id.techinasia.com/peran-data-science-mengembangkan-produk" target="_blank" rel="noopener">Tech in Asia: Peran Data Science dalam Mengembangkan Produk</a></li>
+          <li><span class="yr">2020</span><a href="https://infokomputer.grid.id/read/121995945/ardya-dipta-nandaviri-dari-robot-menjadi-data-scientist-gojek?page=all" target="_blank" rel="noopener">Infokomputer: From Robotics Engineer to Data Scientist</a></li>
+          <li><span class="yr">2020</span><a href="https://kumparan.com/swaonline-admin/ardya-dipta-senior-data-scientist-gojek-pemanfaatan-data-hanya-dibatasi-imajinasi-1stVk0RhsE4/full" target="_blank" rel="noopener">SWA / Kumparan: Pemanfaatan Data Hanya Dibatasi Imajinasi</a></li>
+          <li><span class="yr">2020</span><a href="https://dailysocial.id/post/talenta-ai-engineer-indonesia" target="_blank" rel="noopener">DailySocial: Pencarian Talenta "Engineer AI" untuk Startup Indonesia</a></li>
+          <li><span class="yr">2018</span><a href="https://twitter.com/jokowi/status/1073468090409598977" target="_blank" rel="noopener">World Bank analysis shared by President Joko Widodo</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements" aria-labelledby="ach-h">
+  <div class="wrap">
+    <h2 class="sec" id="ach-h">Achievements</h2>
+    <p class="sub">Competitions, awards and recognition.</p>
+    <div class="two">
+      <ul class="list">
+        <li><span class="yr">2024</span><span>Top-10 finalist, Bank Indonesia AI Hackathon, for <a href="https://www.linkedin.com/posts/ardyadipta_tensorflow-vertexai-activity-7226182776985640960-05k6" target="_blank" rel="noopener">AI lie detection from micro-expressions</a></span></li>
+        <li><span class="yr">2018</span><span>World Bank analysis published by President Joko Widodo</span></li>
+        <li><span class="yr">2011–12</span><span>IBM Excellence Performance Award, top 10% of performers in IBM Indonesia</span></li>
+        <li><span class="yr">2011</span><span>1st place, <a href="https://trinityrobotcontest.org/" target="_blank" rel="noopener">Trinity Fire Fighting Robot Contest</a>, Hartford, Connecticut</span></li>
+      </ul>
+      <ul class="list">
+        <li><span class="yr">2010</span><span>Ganesha Karya Award from the Rector of ITB, top 10 of 3,000 students</span></li>
+        <li><span class="yr">2009</span><span>Champion and Best Algorithm, Indonesia National Intelligent Robot Contest, beating 30+ universities (<a href="https://bandung.kompas.com/read/2010/05/20/17091982/quottpdquot.robot.cerdas.pemadam.api" target="_blank" rel="noopener">Kompas</a>, <a href="https://www.youtube.com/watch?v=Nu2rWDTiMyA" target="_blank" rel="noopener">national TV</a>)</span></li>
+        <li><span class="yr">2009</span><span>National Champion, Smart Robotic Contest, Ministry of Education of Indonesia</span></li>
+        <li><span class="yr">2020–</span><span>Mentor, <a href="https://g.co/bangkit" target="_blank" rel="noopener">Bangkit</a> ML bootcamp by Google, Gojek, Tokopedia and Traveloka</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills" aria-labelledby="skills-h">
+  <div class="wrap two">
+    <div class="skills">
+      <h2 class="sec" id="skills-h">Skills</h2>
+      <h3>ML techniques</h3>
+      <div class="chips"><span class="chip">Reinforcement learning</span><span class="chip">Recommendation systems</span><span class="chip">LLMs &amp; GenAI</span><span class="chip">RAG &amp; agents</span><span class="chip">Computer vision</span><span class="chip">MLOps</span><span class="chip">Fraud detection</span><span class="chip">Imbalanced learning</span><span class="chip">Time-series forecasting</span><span class="chip">Convex &amp; non-convex optimization</span></div>
+      <h3>Languages</h3>
+      <div class="chips"><span class="chip">Python</span><span class="chip">C++</span><span class="chip">SQL</span><span class="chip">Java</span><span class="chip">R</span></div>
+      <h3>Frameworks &amp; platforms</h3>
+      <div class="chips"><span class="chip">TensorFlow</span><span class="chip">PyTorch</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Airflow</span><span class="chip">Spark</span><span class="chip">AWS</span><span class="chip">Google Cloud Platform</span><span class="chip">Vertex AI</span></div>
+    </div>
+    <div class="edu" id="education" aria-labelledby="edu-h">
+      <h2 class="sec" id="edu-h">Education</h2>
+      <div class="grid" style="grid-template-columns:1fr">
+        <article class="card">
+          <h3>Carnegie Mellon University</h3>
+          <p>M.S. in Robotic Systems Development, GPA 3.50 · Pittsburgh, 2013–2014</p>
+          <p style="color:var(--muted);font-size:14px">Machine Learning 10-601 (Tom Mitchell) · Computer Vision 16-720 (Martial Hebert)</p>
+        </article>
+        <article class="card">
+          <h3>Institut Teknologi Bandung</h3>
+          <p>B.Sc. in Electrical Engineering · Bandung, 2006–2010</p>
+          <p style="color:var(--muted);font-size:14px">National Champion, Smart Robotic Contest (Ministry of Education, 2009)</p>
+        </article>
+        <article class="card">
+          <h3>Harvard Business School Online</h3>
+          <p>Certificate in Negotiation Mastery · 2023</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 class="sec" id="contact-h">Contact</h2>
+    <p class="sub">Open to conversations about applied AI, ML platforms, and speaking engagements.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:ardyadipta@gmail.com">ardyadipta@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/ardyadipta" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/ardyadipta" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="assets/Ardya_Dipta_Resume.pdf">Résumé (PDF)</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Ardya Dipta Nandaviri. All rights reserved.</span>
+    <span>Singapore · <a href="#top">Back to top</a></span>
+  </div>
+</footer>
+</body>
+</html>
