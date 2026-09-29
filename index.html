@@ -8,6 +8,8 @@
 <meta property="og:title" content="Ardya Dipta Nandaviri">
 <meta property="og:description" content="Senior AI/ML Consultant · Data Science and AI leader with 10+ years building scalable ML systems · CMU Robotics alum">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://ardyadipta.github.io/">
+<link rel="canonical" href="https://ardyadipta.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='700' fill='%2360a5fa' text-anchor='middle'%3EAD%3C/text%3E%3C/svg%3E">
 <style>
 :root{
@@ -17,24 +19,36 @@
   --max:1080px;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--amber);color:#111;padding:8px 12px;border-radius:6px;z-index:10}
+.skip{position:absolute;left:-999px;top:8px;background:var(--amber);color:#111;padding:8px 12px;border-radius:6px;z-index:70}
 .skip:focus{left:8px}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.wrap{width:min(100% - 48px,var(--max));margin-inline:auto}
+@media (max-width:720px){html{scroll-padding-top:84px}}
+@media (max-width:680px){.wrap{width:min(100% - 32px,var(--max))}}
 
-/* nav */
-.nav{position:sticky;top:0;z-index:5;background:rgba(11,18,32,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:16px}
-.brand{font-weight:700;letter-spacing:.2px;color:var(--ink)}
-.brand span{color:var(--accent)}
-.nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0;font-size:14px}
-.nav ul a{color:var(--ink2)}
-.nav ul a:hover{color:var(--ink);text-decoration:none}
-@media (max-width:720px){.nav ul{display:none}}
+/* ===== Site chrome: shared by ardyadipta.github.io and ardyadipta.github.io/blog. Keep identical in both repos. ===== */
+.site-header{position:sticky;top:0;z-index:60;background:rgba(11,18,32,.9);border-bottom:1px solid #22304d;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);color:#e6edf7;font:14px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:20px;width:min(100% - 48px,1080px);min-height:60px;margin:0 auto}
+.site-brand{flex:none;color:#e6edf7;font-size:16px;font-weight:750;letter-spacing:.1px;text-decoration:none;white-space:nowrap}
+.site-brand span{color:#60a5fa}
+.site-brand:hover{color:#fff;text-decoration:none}
+.site-menu{display:flex;align-items:center;gap:2px;min-width:0}
+.site-menu a{padding:7px 11px;border-radius:8px;color:#b7c3d8;font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap}
+.site-menu a:hover{background:rgba(96,165,250,.1);color:#e6edf7;text-decoration:none}
+.site-menu a[aria-current]{background:rgba(96,165,250,.16);color:#fff;font-weight:650}
+.site-header a:focus-visible,.site-footer a:focus-visible{outline:3px solid #fbbf24;outline-offset:2px;border-radius:6px}
+.site-footer{max-width:none;margin:0;padding:28px 0 40px;border-top:1px solid #22304d;background:#0b1220;color:#8290ab;font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.site-footer__inner{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;width:min(100% - 48px,1080px);margin:0 auto}
+.site-footer__links{display:flex;gap:6px 18px;flex-wrap:wrap}
+.site-footer__links a{color:#b7c3d8;text-decoration:none}
+.site-footer__links a:hover{color:#e6edf7;text-decoration:underline}
+@media (max-width:720px){.site-header__inner{display:block;min-height:0;padding:10px 0 6px}.site-brand{display:inline-block;font-size:15px}.site-menu{gap:0;margin:3px -7px 0;overflow-x:auto;scrollbar-width:none}.site-menu::-webkit-scrollbar{display:none}.site-menu a{padding:6px 7px;font-size:13px}}
+@media (max-width:680px){.site-header__inner,.site-footer__inner{width:min(100% - 32px,1080px)}}
+/* ===== End site chrome ===== */
 
 /* hero */
 .hero{padding:72px 0 48px;background:radial-gradient(900px 400px at 15% -10%,rgba(96,165,250,.18),transparent 60%),radial-gradient(700px 400px at 90% 10%,rgba(52,211,153,.12),transparent 60%)}
@@ -98,6 +112,14 @@ h2.sec{font-size:26px;margin:0 0 6px;letter-spacing:-.3px}
 .tag{display:inline-block;font-size:12px;color:var(--muted);background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:2px 8px;margin:0 6px 6px 0}
 .links{display:flex;gap:14px;font-size:14px;flex-wrap:wrap}
 .card.feature{grid-column:1/-1;background:linear-gradient(135deg,var(--panel),#13213f);border-color:#2b4370}
+.card.feature h3{font-size:22px}
+.card h3 a{color:var(--ink)}
+.card h3 a:hover{color:#fff}
+.card-kicker{margin:0 0 8px;color:var(--accent2);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.card .card-kicker{margin:0 0 8px;color:var(--accent2);font-size:12px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;margin-bottom:28px}
+.sec-head .sub{margin:0}
+.sec-actions{display:flex;gap:10px;flex-wrap:wrap}
 
 /* two-col lists */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
@@ -113,28 +135,25 @@ h2.sec{font-size:26px;margin:0 0 6px;letter-spacing:-.3px}
 .edu .card h3{font-size:16px}
 .edu .card p{margin-bottom:6px}
 
-/* footer */
-footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<nav class="nav" aria-label="Primary">
-  <div class="wrap">
-    <a class="brand" href="#top">Ardya <span>Dipta</span> Nandaviri</a>
-    <ul>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#writing">Writing</a></li>
-      <li><a href="#achievements">Achievements</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+<!-- Site header: shared by ardyadipta.github.io and ardyadipta.github.io/blog. Keep the links identical in both repos. -->
+<div class="site-header">
+  <div class="site-header__inner">
+    <a class="site-brand" href="#top">Ardya <span>Dipta</span> Nandaviri</a>
+    <nav class="site-menu" aria-label="Site">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="https://ardyadipta.github.io/blog/">Writing</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
-</nav>
+</div>
 
 <header class="hero" id="top">
   <div class="wrap hero-grid">
@@ -277,12 +296,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <h2 class="sec" id="proj-h">Projects</h2>
     <p class="sub">Open-source work and write-ups. Private repositories are available on request for hiring purposes.</p>
     <div class="grid">
-      <article class="card feature">
-        <h3>Deploying a 100,000-document RAG knowledge base</h3>
-        <p>A long-form design walkthrough: tiered ingestion (layout parsing, OCR, vision captions), structure-aware chunking, metadata filtering, BM25 and HNSW retrieval, reciprocal rank fusion with reranking, and when GraphRAG earns its cost. Paired with an interactive, animated 12-step explainer.</p>
-        <span class="tag">RAG</span><span class="tag">Hybrid retrieval</span><span class="tag">GraphRAG</span><span class="tag">System design</span>
-        <div class="links"><a href="https://ardyadipta.github.io/blog/rag-pipeline-explainer.html">Animated explainer</a></div>
-      </article>
       <article class="card">
         <h3>LLM chatbot assistant</h3>
         <p>Document-querying chatbot built with Google Gemini, FAISS and LangChain to improve employee productivity.</p>
@@ -325,7 +338,43 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <section id="writing" aria-labelledby="writing-h">
   <div class="wrap">
-    <h2 class="sec" id="writing-h">Writing &amp; speaking</h2>
+    <div class="sec-head">
+      <div>
+        <h2 class="sec" id="writing-h">Writing</h2>
+        <p class="sub">Field notes on production AI, retrieval, and machine learning systems.</p>
+      </div>
+      <div class="sec-actions">
+        <a class="btn primary" href="https://ardyadipta.github.io/blog/">All writing <span aria-hidden="true">→</span></a>
+        <a class="btn" href="https://medium.com/@ardyadipta" target="_blank" rel="noopener">Medium <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="grid">
+      <article class="card feature">
+        <p class="card-kicker">Latest · Long-form guide with interactive walkthrough</p>
+        <h3><a href="https://ardyadipta.github.io/blog/deploying-a-100k-document-rag-knowledge-base.html">From 100,000 documents to grounded answers</a></h3>
+        <p>A long-form design walkthrough: tiered ingestion (layout parsing, OCR, vision captions), structure-aware chunking, metadata filtering, BM25 and HNSW retrieval, reciprocal rank fusion with reranking, and when GraphRAG earns its cost. Paired with an interactive, animated 12-step explainer.</p>
+        <span class="tag">RAG</span><span class="tag">Hybrid retrieval</span><span class="tag">GraphRAG</span><span class="tag">System design</span>
+        <div class="links"><a href="https://ardyadipta.github.io/blog/deploying-a-100k-document-rag-knowledge-base.html">Read the article →</a><a href="https://ardyadipta.github.io/blog/rag-pipeline-explainer.html">Play the interactive walkthrough</a></div>
+      </article>
+      <article class="card">
+        <p class="card-kicker">Medium · GenAI</p>
+        <h3><a href="https://medium.com/@ardyadipta/how-google-gemini-can-help-you-create-a-mike-ross-like-chatbot-agent-in-minutes-6fd8199e3122" target="_blank" rel="noopener">How Google Gemini can help create a “Mike Ross” chatbot agent</a></h3>
+        <p>Building a document-querying assistant with Google Gemini, FAISS, and LangChain for fast, grounded access to organizational knowledge.</p>
+        <div class="links"><a href="https://medium.com/@ardyadipta/how-google-gemini-can-help-you-create-a-mike-ross-like-chatbot-agent-in-minutes-6fd8199e3122" target="_blank" rel="noopener">Read on Medium ↗</a></div>
+      </article>
+      <article class="card">
+        <p class="card-kicker">Medium · Reinforcement learning</p>
+        <h3><a href="https://medium.com/@ardyadipta/teaching-ai-to-understand-us-reinforcement-learning-with-human-feedback-rlhf-5fc5ae16da40" target="_blank" rel="noopener">Teaching AI to understand us with RLHF</a></h3>
+        <p>An introduction to fine-tuning language models with reinforcement learning from human feedback, from preference data to improved model behavior.</p>
+        <div class="links"><a href="https://medium.com/@ardyadipta/teaching-ai-to-understand-us-reinforcement-learning-with-human-feedback-rlhf-5fc5ae16da40" target="_blank" rel="noopener">Read on Medium ↗</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="speaking" aria-labelledby="speaking-h">
+  <div class="wrap">
+    <h2 class="sec" id="speaking-h">Speaking &amp; press</h2>
     <p class="sub">100+ public talks at tech companies, universities, national institutions and communities.</p>
     <div class="two">
       <div>
@@ -334,7 +383,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <li><span class="yr">2024</span><a href="https://gdg.community.dev/events/details/google-gdg-jakarta-presents-devfest-jakarta-2024/" target="_blank" rel="noopener">Google DevFest Jakarta</a></li>
           <li><span class="yr">Talk</span><a href="https://www.youtube.com/watch?v=6sSF5sOov6w&amp;t=583s" target="_blank" rel="noopener">Google Cloud Next</a></li>
           <li><span class="yr">Talk</span><a href="https://www.youtube.com/watch?v=5ofra-bKJtc" target="_blank" rel="noopener">Tech in Asia</a></li>
-          <li><span class="yr">Medium</span><a href="https://medium.com/@ardyadipta" target="_blank" rel="noopener">Articles on LLMs, RLHF and applied ML</a></li>
         </ul>
       </div>
       <div>
@@ -419,10 +467,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 </main>
 
-<footer>
-  <div class="wrap">
+<!-- Site footer: shared by ardyadipta.github.io and ardyadipta.github.io/blog. -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
     <span>&copy; 2026 Ardya Dipta Nandaviri. All rights reserved.</span>
-    <span>Singapore · <a href="#top">Back to top</a></span>
+    <nav class="site-footer__links" aria-label="Footer">
+      <a href="https://ardyadipta.github.io/blog/">Writing</a>
+      <a href="https://www.linkedin.com/in/ardyadipta" target="_blank" rel="me noopener">LinkedIn</a>
+      <a href="https://github.com/ardyadipta" target="_blank" rel="me noopener">GitHub</a>
+      <a href="#top">Back to top</a>
+    </nav>
   </div>
 </footer>
 </body>
